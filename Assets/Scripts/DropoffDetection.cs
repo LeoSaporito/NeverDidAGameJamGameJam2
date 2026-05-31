@@ -2,51 +2,20 @@ using UnityEngine;
 
 public class DropoffDetection : MonoBehaviour
 {
-    [SerializeField] GameObject dropoffSpot;
-    [SerializeField] GameObject dropoffPerson;
-
-    PickupDetection pickupDetectionScript;
-
-    Vector2 dropoffPosition;
-
-    public bool successfullyDropped;
-    void Start()
-    {
-        pickupDetectionScript = GetComponent<PickupDetection>();
-    }
-
-    void Update()
-    {
-        TurnOnDropoffSpot();
-    }
+    [SerializeField] GameObject personDropoff;
 
     void OnTriggerEnter2D(Collider2D collision)
     { 
-        if(collision.gameObject.CompareTag("Dropoff"))
+        if(collision.gameObject.CompareTag("Player"))
         {
-            ReachedDropoffDestination();
+            DropoffPerson();
         }
     }
 
-    void TurnOnDropoffSpot()
+    void DropoffPerson()
     {
-        if (pickupDetectionScript.pickupTimerProgress >= pickupDetectionScript.pickupTimerDuration)
-        {
-            dropoffSpot.SetActive(true);
-        }
-    }
-
-    void ReachedDropoffDestination()
-    {
-        dropoffPosition = dropoffSpot.transform.position + new Vector3(0, 2, 0);
-
-        dropoffSpot.SetActive(false);
-
-        GameObject newPersonAtDrop = Instantiate(dropoffPerson, dropoffPosition, Quaternion.identity);
-
-        newPersonAtDrop.SetActive(true);
-
-        successfullyDropped = true;
+        personDropoff.SetActive(true);
+        gameObject.SetActive(false);
     }
 }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7195964654567123704}
   - component: {fileID: 8354956197977223561}
   - component: {fileID: 5488720387293418443}
+  - component: {fileID: 7603846526121070567}
   m_Layer: 0
   m_Name: Pickup Spot
   m_TagString: Pickup
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9, y: 0, z: 0}
-  m_LocalScale: {x: 2.1155455, y: 2.1155455, z: 2.1155455}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -128,3 +129,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &7603846526121070567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679537726122259743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151abf5d024cf2042a1cc2531e8155cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupDetection
+  pickupSpot: {fileID: 4679537726122259743}
+  pickupTimerProgress: 0
+  pickupTimerDuration: 2

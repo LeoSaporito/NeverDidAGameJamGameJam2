@@ -2,49 +2,58 @@ using UnityEngine;
 
 public class PickupDetection : MonoBehaviour
 {
-    [SerializeField] GameObject pickupPerson;
-    [SerializeField] GameObject pickupSpot;
+    [SerializeField] GameObject dropoffSpot;
+    [SerializeField] GameObject personPickup;
+    [SerializeField] GameObject personDropoff;
 
     [SerializeField] public float pickupTimerProgress;
     [SerializeField] public float pickupTimerDuration;
 
-    bool isInPickupBox;
+    bool isPlayerInside;
+    bool hasBeenPickedup;
 
-    private void Update()
+    void Start()
     {
-        PickupTimer();
+        dropoffSpot.SetActive(false);
+        personDropoff.SetActive(false);
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    void Update()
     {
-        if (collision.gameObject.CompareTag("Pickup"))
-        {
-            isInPickupBox = true;
-        }
-    }
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        pickupTimerProgress = 0f;
-        isInPickupBox = false;
-    }
-    void PickupTimer()
-    {
-        if (isInPickupBox)
+        if (isPlayerInside && !hasBeenPickedup)
         {
             pickupTimerProgress += Time.deltaTime;
 
-            if (pickupTimerProgress > pickupTimerDuration)
+            if (pickupTimerProgress >= pickupTimerDuration)
             {
                 PickedUpPerson();
             }
         }
     }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerInside = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        { 
+            isPlayerInside = false;
+            pickupTimerProgress = 0f;        
+        }
+    }
     void PickedUpPerson()
     { 
-        pickupPerson.SetActive(false);
-        pickupSpot.SetActive(false);
-        isInPickupBox = false;
-        pickupTimerProgress = pickupTimerDuration;        
+        hasBeenPickedup = true;
+
+        personPickup.SetActive(false);
+        gameObject.SetActive(false);
+
+        dropoffSpot.SetActive(true);
     }
 }
 
