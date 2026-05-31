@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 379621054}
   - component: {fileID: 379621053}
   m_Layer: 0
-  m_Name: Zombie Spawner
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2288,6 +2288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcf751a2474f4b4f9efcb0bc906ce02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpawner
+  _layersEnemiesCannotSpawnOn:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1449797536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,8 +2673,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b593f7a1e75e3c4d9b5877d9562041a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomDetection
-  _enemiesToSpawn: []
-  _currentRoomSpawnableArea: {fileID: 0}
+  _enemiesToSpawn:
+  - {fileID: 7834400717389489644, guid: e6d034b3f2298084b9ca9a8d88554cfa, type: 3}
+  - {fileID: 7562587496864597848, guid: 992d833a13c790b43a978edf44704620, type: 3}
+  - {fileID: 2242935668411552709, guid: 457d7e51fda99d2419f74f8bb96e284c, type: 3}
+  - {fileID: 1367432623958570604, guid: 4a3684b7efa422142a5f964a34451f6f, type: 3}
+  _currentRoomSpawnableArea: {fileID: 379621053}
 --- !u!61 &1856006877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2959,6 +2966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcf751a2474f4b4f9efcb0bc906ce02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpawner
+  _layersEnemiesCannotSpawnOn:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
