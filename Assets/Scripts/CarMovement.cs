@@ -7,8 +7,9 @@ public class CarMovement : MonoBehaviour
     [SerializeField] float currentSpeed;
     [SerializeField] float speedLimitMax;
     [SerializeField] float speedLimitMin;
-
     [SerializeField] float steerSpeed;
+
+    [SerializeField] Animator myAnimator;
 
     Vector2 directionalInput;
     Vector3 position;
@@ -35,7 +36,17 @@ public class CarMovement : MonoBehaviour
 
     void Drive()
     {
-        position = transform.position;
+        if (directionalInput.y != 0)
+        {
+            myAnimator.SetBool("Idle", false);
+            myAnimator.SetBool("Driving", true);
+        }
+        else 
+        {
+            myAnimator.SetBool("Idle", true);
+            myAnimator.SetBool("Driving", false);        
+        }
+            position = transform.position;
 
         if (directionalInput.y > 0)
         {

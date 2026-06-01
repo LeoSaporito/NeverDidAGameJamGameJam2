@@ -106,8 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5839061b7920bc84980f581eb671813b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  enemyMoveSpeed: 6
+  enemyMoveSpeed: 4
   distanceToPlayer: 20
+  zombieCollisionsScript: {fileID: 0}
 --- !u!61 &396713203568804280
 BoxCollider2D:
   m_ObjectHideFlags: 0
