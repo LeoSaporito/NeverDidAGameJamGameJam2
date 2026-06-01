@@ -1,52 +1,31 @@
 using UnityEngine;
+using TMPro;
 
 public class DropoffDetection : MonoBehaviour
 {
-    [SerializeField] GameObject dropoffSpot;
-    [SerializeField] GameObject dropoffPerson;
+    [SerializeField] GameObject personDropoff;
+    [SerializeField] TextMeshProUGUI scoreText;
 
-    PickupDetection pickupDetectionScript;
+    float score;
+    float moneyMade;
 
-    Vector2 dropoffPosition;
-
-    public bool successfullyDropped;
-    void Start()
+    private void Update()
     {
-        pickupDetectionScript = GetComponent<PickupDetection>();
+        scoreText.text = "Fare: " + score + "$";
     }
-
-    void Update()
-    {
-        TurnOnDropoffSpot();
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     { 
-        if(collision.gameObject.CompareTag("Dropoff"))
+        if(collision.gameObject.CompareTag("Player"))
         {
-            ReachedDropoffDestination();
+            DropoffPerson();
+            score += moneyMade;
         }
     }
 
-    void TurnOnDropoffSpot()
+    void DropoffPerson()
     {
-        if (pickupDetectionScript.pickupTimerProgress >= pickupDetectionScript.pickupTimerDuration)
-        {
-            dropoffSpot.SetActive(true);
-        }
-    }
-
-    void ReachedDropoffDestination()
-    {
-        dropoffPosition = dropoffSpot.transform.position + new Vector3(0, 2, 0);
-
-        dropoffSpot.SetActive(false);
-
-        GameObject newPersonAtDrop = Instantiate(dropoffPerson, dropoffPosition, Quaternion.identity);
-
-        newPersonAtDrop.SetActive(true);
-
-        successfullyDropped = true;
+        personDropoff.SetActive(true);
+        gameObject.SetActive(false);
     }
 }
 
