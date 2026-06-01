@@ -13,8 +13,17 @@ public class CarMovement : MonoBehaviour
     Vector2 directionalInput;
     Vector3 position;
 
+    bool isAlive;
+
+    private void Start()
+    {
+        isAlive = true;
+    }
+
     void Update()
     {
+        if (!isAlive) { return; }
+
         Drive();
         Steer();
     }
@@ -78,5 +87,10 @@ public class CarMovement : MonoBehaviour
         float steer = Time.deltaTime * directionalInput.x * steerSpeed;
 
         transform.Rotate(0, 0, -steer);
+    }
+
+    public void DisableControls()
+    {
+        isAlive = false;
     }
 }

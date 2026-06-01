@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   enemyMoveSpeed: 1
+  distanceToPlayer: 20
 --- !u!61 &5379226007397655518
 BoxCollider2D:
   m_ObjectHideFlags: 0
