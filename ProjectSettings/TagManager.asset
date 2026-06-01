@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pickup
   - Dropoff
+  - Zombie
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2122544645
+    locked: 0
+  - name: UI
+    uniqueID: 1373859095
     locked: 0
   m_RenderingLayers:
   - Default
