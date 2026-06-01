@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 467a0dbaeae23b14ea342365bcf11eb0
+guid: 14f5139bf706a71448088651b613d8ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8059064734692393039
-    second: RoofTopFour 1_0
+      213: -1626234641989093106
+    second: RightSideRoad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RoofTopFour 1_0
+      name: RightSideRoad_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f40c73d6dac87df60800000000000000
-      internalID: 8059064734692393039
+      spriteID: e093ec295347e69e0800000000000000
+      internalID: -1626234641989093106
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RoofTopFour 1_0: 8059064734692393039
+      RightSideRoad_0: -1626234641989093106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
