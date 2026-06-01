@@ -44,7 +44,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Pickup
+  - name: 
     uniqueID: 3542310909
     locked: 0
   - name: Player
@@ -52,6 +52,12 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1373859095
+    locked: 0
+  - name: Map
+    uniqueID: 514416835
+    locked: 0
+  - name: OnTopOfMap
+    uniqueID: 993072487
     locked: 0
   m_RenderingLayers:
   - Default
