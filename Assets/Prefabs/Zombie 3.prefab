@@ -109,6 +109,8 @@ MonoBehaviour:
   enemyMoveSpeed: 4
   distanceToPlayer: 20
   zombieCollisionsScript: {fileID: 0}
+  spriteRenderer: {fileID: 8431908249776777246}
+  newSprite: {fileID: 6532221654081681961, guid: f90d0568d7e64e14aaa55864415d0846, type: 3}
 --- !u!61 &396713203568804280
 BoxCollider2D:
   m_ObjectHideFlags: 0

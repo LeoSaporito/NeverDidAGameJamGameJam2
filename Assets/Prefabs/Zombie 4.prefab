@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3110740557918593979, guid: 6768208a481f4ad4f97bb313f774daac, type: 3}
+  m_Sprite: {fileID: 5443314406858615876, guid: 7d08e14b40af66749b94bb54d8c8c539, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   enemyMoveSpeed: 5
   distanceToPlayer: 20
   zombieCollisionsScript: {fileID: 0}
+  spriteRenderer: {fileID: 950894949541804580}
+  newSprite: {fileID: 6532221654081681961, guid: f90d0568d7e64e14aaa55864415d0846, type: 3}
 --- !u!61 &6699286231498261300
 BoxCollider2D:
   m_ObjectHideFlags: 0
