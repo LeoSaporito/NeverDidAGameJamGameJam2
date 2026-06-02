@@ -6,6 +6,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float enemyMoveSpeed;
     [SerializeField] float distanceToPlayer;
     [SerializeField] ZombieCollisions zombieCollisionsScript;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite; 
     
     CarMovement carMovementScript;
     ZombieSpawner zombieSpawnerScript;
