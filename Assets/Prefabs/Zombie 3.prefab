@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -570411265
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7529538406662929963, guid: 8f099501d081f3549a59f77d5876431f, type: 3}
@@ -111,6 +111,8 @@ MonoBehaviour:
   zombieCollisionsScript: {fileID: 0}
   spriteRenderer: {fileID: 8431908249776777246}
   newSprite: {fileID: 6532221654081681961, guid: f90d0568d7e64e14aaa55864415d0846, type: 3}
+  bloodSplatter: {fileID: 2615648728671629763, guid: 1706264659d8a1a4aa58001d016e4bbc, type: 3}
+  particalSplatter: {fileID: 2615648728671629763, guid: 1706264659d8a1a4aa58001d016e4bbc, type: 3}
 --- !u!61 &396713203568804280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.78, y: 1.7}
+    oldSize: {x: 0.6953125, y: 0.6640625}
     newSize: {x: 1.78, y: 1.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
