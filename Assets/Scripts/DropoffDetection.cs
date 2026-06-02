@@ -4,26 +4,19 @@ using TMPro;
 public class DropoffDetection : MonoBehaviour
 {
     [SerializeField] GameObject personDropoff;
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] ScoreUpdate scoreUpdateScript;
 
-    float score;
-    float moneyMade;
-
-    private void Update()
-    {
-        scoreText.text = "Fare: " + score + "$";
-    }
     void OnTriggerEnter2D(Collider2D collision)
     { 
         if(collision.gameObject.CompareTag("Player"))
         {
             DropoffPerson();
-            score += moneyMade;
-        }
+        }        
     }
 
     void DropoffPerson()
     {
+        scoreUpdateScript.AddToScore();
         personDropoff.SetActive(true);
         gameObject.SetActive(false);
     }
