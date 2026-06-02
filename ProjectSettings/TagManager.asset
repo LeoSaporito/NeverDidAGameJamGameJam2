@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Cant Spawn
   - 
   - 
   - 
@@ -41,23 +41,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: 
     uniqueID: 3542310909
-    locked: 0
-  - name: Player
-    uniqueID: 2122544645
-    locked: 0
-  - name: UI
-    uniqueID: 1373859095
     locked: 0
   - name: Map
     uniqueID: 514416835
     locked: 0
   - name: OnTopOfMap
     uniqueID: 993072487
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1373859095
+    locked: 0
+  - name: Player
+    uniqueID: 2122544645
     locked: 0
   m_RenderingLayers:
   - Default
