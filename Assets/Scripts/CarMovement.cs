@@ -16,12 +16,15 @@ public class CarMovement : MonoBehaviour
 
     bool isAlive;
 
+    Rigidbody2D myRigidbody;
+
     private void Start()
     {
         isAlive = true;
+        myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isAlive) { return; }
 
