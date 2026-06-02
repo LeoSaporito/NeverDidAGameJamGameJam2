@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -7,8 +9,10 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float distanceToPlayer;
     [SerializeField] ZombieCollisions zombieCollisionsScript;
     public SpriteRenderer spriteRenderer;
-    public Sprite newSprite; 
-    
+    public Sprite newSprite;
+    public GameObject bloodSplatter;
+    public GameObject particalSplatter;
+
     CarMovement carMovementScript;
     ZombieSpawner zombieSpawnerScript;
 
@@ -56,5 +60,15 @@ public class EnemyMovement : MonoBehaviour
     void FacePlayer()
     {
         transform.Rotate(0f, 0f, direction.z);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+            GameObject spawnedBlood = Instantiate(bloodSplatter, transform.position , Quaternion.identity);
+            GameObject spawnedSplatter = Instantiate(particalSplatter, transform.position, Quaternion.identity);
+        }
     }
 }
